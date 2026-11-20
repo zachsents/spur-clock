@@ -294,6 +294,12 @@ export const clockApp = defineApp<Clocks>({
       surfaces: ["space"],
       resource: "ui://clock/timers",
       space: HOME,
+      size: {
+        aspect: "auto",
+        min: { cols: 3, rows: 1 },
+        preferred: { cols: 4, rows: 2 },
+        grows: true,
+      },
       tool: "state",
       refresh: [Changed.type],
       // A line per clock, in Switch's catalog: its mark, its name, its time running live.
